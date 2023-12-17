@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="collapse navbar-collapse margin-logo" id="navbarNav">
+    <a class="navbar-brand" routerLink="/">Car Pool System</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav" *ngIf="isActiveUser">
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/available-ride">Available-Ride</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/create-ride">Create-Ride</a>
+      </li>
+    </ul>
+  </div>
+  <div
+    class="collapse navbar-collapse justify-content-end margin-navlink"
+    id="navbarNav"
+  >
+    <ul class="navbar-nav" *ngIf="isActiveUser">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/my-ride">My-Ride</a>
+      </li>
+      <li class="nav-item">
+        <ng-container *ngIf="isActiveUser">
+          <a class="nav-link" *ngIf="isActiveUser" routerLink="/logout"
+            >Logout</a
+          >
+        </ng-container>
+      </li>
+    </ul>
+  </div>
+</nav>

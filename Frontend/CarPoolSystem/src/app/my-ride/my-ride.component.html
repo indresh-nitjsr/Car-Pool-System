@@ -1,0 +1,33 @@
+<div class="container mt-5 mb-5" *ngIf="isActiveUser">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header bg-success text-white">
+          <h3 class="mb-0">My Rides</h3>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let ride of cartRides" class="list-group-item">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">{{ ride.name }}</h5>
+                <span class="badge badge-primary badge-pill"
+                  >{{ ride.seat_Available }} seats</span
+                >
+              </div>
+              <p class="mb-1">Destination: {{ ride.destination }}</p>
+              <p class="mb-1">Car: {{ ride.car_Name }}</p>
+              <p class="mb-1">Phone No: {{ ride.phone_no }}</p>
+              <p class="mb-1">Departure Time: {{ ride.departureTime }}</p>
+              <button
+                class="btn btn-danger btn-sm float-right"
+                (click)="removeFromCart(ride)"
+              >
+                Remove from Cart
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

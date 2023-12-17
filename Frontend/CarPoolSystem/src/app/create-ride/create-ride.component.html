@@ -1,0 +1,100 @@
+<div class="offer" *ngIf="isActiveUser">
+  <div class="create-container">
+    <div class="OfferRide-header text-center">
+      <h1>Offer a Ride</h1>
+    </div>
+    <form (ngSubmit)="submitForm()" class="mt-4">
+      <div class="form-group mb-3">
+        <label for="name">Name<span class="text-danger">*</span></label>
+        <input
+          [(ngModel)]="formData.Name"
+          name="name"
+          class="form-control"
+          id="name"
+          placeholder="Enter your full name"
+          required
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="source"
+          >Start Location<span class="text-danger">*</span></label
+        >
+        <input
+          [(ngModel)]="formData.Source"
+          name="source"
+          class="form-control"
+          id="source"
+          placeholder="Enter your start location"
+          required
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="destination"
+          >Destination<span class="text-danger">*</span></label
+        >
+        <input
+          [(ngModel)]="formData.Destination"
+          name="destination"
+          class="form-control"
+          id="destination"
+          placeholder="Enter your destination"
+          required
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="carName">Car Name<span class="text-danger">*</span></label>
+        <input
+          [(ngModel)]="formData.Car_Name"
+          name="carName"
+          class="form-control"
+          id="carName"
+          placeholder="Enter your car name"
+          required
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="seatAvailable"
+          >Seat Available<span class="text-danger">*</span></label
+        >
+        <input
+          [(ngModel)]="formData.Seat_Available"
+          name="seatAvailable"
+          class="form-control"
+          id="seatAvailable"
+          placeholder="Enter the number of available seats"
+          required
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="phone"
+          >Phone Number<span class="text-danger">*</span></label
+        >
+        <input
+          [(ngModel)]="formData.Phone_no"
+          name="phone"
+          class="form-control"
+          id="phone"
+          placeholder="Enter your phone number (10 digits)"
+          required
+          pattern="^\d{10}$"
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="departureTime"
+          >Departure Time<span class="text-danger">*</span></label
+        >
+        <input
+          [(ngModel)]="formData.DepartureTime"
+          name="departureTime"
+          class="form-control"
+          id="departureTime"
+          type="datetime-local"
+          required
+        />
+      </div>
+      <div class="text-center w-100 mb-5">
+        <button class="btn btn-success" type="submit">Create Ride</button>
+      </div>
+    </form>
+  </div>
+</div>

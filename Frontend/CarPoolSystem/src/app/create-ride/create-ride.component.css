@@ -1,0 +1,18 @@
+.offer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .create-container {
+    width: 50%;
+  }
+  
+
+  .OfferRide-header {
+    margin-bottom: 20px;
+  }
+
+  .btn-success {
+    width: 100%;
+  }  
+  

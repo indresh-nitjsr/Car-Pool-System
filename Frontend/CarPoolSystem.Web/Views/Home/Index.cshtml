@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (!User.Identity.IsAuthenticated)
+{
+
+    <h1 style="text-align:center ; text-item:center"><i><b>Welcome to the Car Pool System</b></i></h1>
+
+    <br/>
+    <br/>
+
+
+
+<div class="card signin-signup-card container home-card" >
+    <div  >
+       <a asp-controller="Identity" asp-action="Registration" class="btn signin-signup-btn">Sign Up</a>
+    </div>
+    <br />
+    <br/>
+    <div >
+        <a asp-controller="Identity" asp-action="Login" class="btn signin-signup-btn">Sign In</a>
+    </div>
+
+    </div>
+}
+else
+{
+    <h1 style="text-align:center ; text-item:center"><b><i>Wecome to Our Carpool system</i></b></h1>
+
+}
+

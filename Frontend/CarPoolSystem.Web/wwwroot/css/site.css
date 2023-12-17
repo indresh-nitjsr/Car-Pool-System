@@ -1,0 +1,205 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+
+.html {
+    
+    background-image: url('https://img.freepik.com/free-vector/carpool-concept-illustration_114360-9298.jpg?w=2000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90%;
+    font-family: 'Numans', sans-serif;
+}
+
+.container {
+    height: 100%;
+    align-content: center;
+}
+
+.login-card {
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+
+.signin-signup-card {
+    height: 270px;
+    width: 400px;
+    background-color: rgba(0,0,0,0.4) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:40px;
+}
+
+.home-card {
+    width: 50%; /* Adjust the width as needed */
+    text-align: center; /* Center the content inside the card horizontally */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow to the card */
+}
+
+.register-card {
+    height: 593px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 500px;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+
+.social_icon span {
+    font-size: 60px;
+    margin-left: 10px;
+    color: #FFC312;
+}
+
+
+  .social_icon span:hover {
+        color: white;
+        cursor: pointer;
+}
+
+.card-header h3 {
+    color: white;
+}
+
+.social_icon {
+    position: absolute;
+    right: 20px;
+    top: -45px;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+    color: white;
+}
+
+    .remember input {
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+.login_btn {
+    color: black;
+    background-color: #FFC312;
+    width: 100px;
+}
+
+.signin-signup-btn  {
+    color: black;
+    background-color: #FFC312;
+    width: 300px;
+}
+
+    .login_btn:hover {
+        color: black;
+        background-color: white;
+    }
+
+.links {
+    color: white;
+}
+
+.links a {
+        margin-left: 4px;
+        
+}
+
+
+.offer{
+   align-items:center;
+}
+
+.create-container {
+   
+    max-width: 500px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /*Semi-transparent white;*/
+    border-radius: 10px; /* Rounded corners */
+    margin-right: 10px;
+    margin-left: auto;
+    border: 4px groove orange;
+}
+
+.create-container .OfferRide-header h1 {
+        text-align:center;
+}
+.input-field {
+   width:420px;
+}
+.footer {
+margin-top:10px;
+}
+
+
+
+
+/* Style for form inputs */
+/*input[type="text"],
+input[type="number"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}*/
+
+/* Style for the submit button */
+/*input[type="submit"] {
+    background-color: orange;*/ /* Change to your desired color */
+    /*color: #fff;*/ /*  Text color (white in this case) */
+    /*padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-title {
+    text-align: center;*/  /*Center-align the title */
+    /*margin-top: 10px;
+    margin-bottom:10px;*/ /*Add some spacing below the title */
+/*}*/
+

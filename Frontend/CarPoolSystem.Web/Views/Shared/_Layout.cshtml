@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="html" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CarPoolSystem.Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CarPoolSystem.Web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+</head>
+<body class="html">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-#FFC312 border-bottom box-shadow mb-3" style="background-color: #FFC312; color: #FFFFFF;">
+            <div class="container-fluid">
+                <h1 class="navbar-brand" >CarPool Web Application</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                        </ul>
+                    }
+                    
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div style="display:flex; justify-content:right; margin-left:940px">
+                        <ul class="navbar-nav" >
+                            <li class="nav-item">
+                                <a asp-action="AvailableRide" asp-controller="OfferRide" class="btn btn-link nav-link text-dark">Available Rides</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <form method="post" asp-action="CreateOfferRide" asp-controller="OfferRide">
+                                    <button type="submit" class="btn btn-link nav-link text-dark">OfferRide</button>
+                                </form>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <form method="post" asp-action="Logout" asp-controller="Identity">
+                                    <button type="submit" class="btn btn-link nav-link text-dark">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <partial name="_Notifications" />
+            @RenderBody()
+            
+        </main>
+    </div>
+
+
+    <footer>
+        <div class="container" style="display:flex; justify-content:left; margin-right:940px; position: relative">
+            <h3 style="position: absolute; bottom: 80px;"><b><i>CarPool Web Application Created By- Roma Nikhat Deepika</i></b></h3>
+        </div>
+    </footer> 
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
